@@ -18,7 +18,7 @@
             <div class="icon">ZIPPY</div>
             <div class="links">
                 <ul>
-                    <li>HOME</li>
+                    <li><a href="/">HOME</a></li>
                     <li><a href="#project">PROJECTS</a></li>
                     <li><a href="#pricing">PRICING</a></li>
                     <li><a href="#team">TEAM</a></li>
@@ -299,10 +299,12 @@
     <section class="newsletter" style="margin-bottom: 10px;">
         <h1 class="heading">News Letter Signup</h1>
         <div>
-            <input type="email" placeholder="abc@example.com">
-            <button class="butt" style="padding: 12px;">Sign up</button>
-            <br>
-            <button class="butt button2">Sign in</button>
+            <form action="/">
+                <input type="email" placeholder="abc@example.com">
+                <button class="butt" style="padding: 12px;" type="submit">Sign up</button>
+                <br>
+                <button class="butt button2">Sign in</button>
+            </form>
         </div>
     </section>
     <section class="pricingDiv">
@@ -344,15 +346,18 @@
             <h3 class="heading" style="font-weight: bolder; text-align: left; margin: 30px;">Contact
             </h3>
             <div class="formInp">
-                <label for="">NAME : </label><br>
-                <input type="text"><br>
-                <label for="">EMAIL ADDRESS : </label><br>
-                <input type="email"><br>
-                <label for="">SUBJECT : </label><br>
-                <input type="text"><br>
-                <label for="">MESSAGE :</label><br>
-                <textarea cols="30" rows="10"></textarea><br>
-                <button>SEND</button>
+                <form action="/">
+
+                    <label for="">NAME : </label><br>
+                    <input type="text"><br>
+                    <label for="">EMAIL ADDRESS : </label><br>
+                    <input type="email"><br>
+                    <label for="">SUBJECT : </label><br>
+                    <input type="text"><br>
+                    <label for="">MESSAGE :</label><br>
+                    <textarea cols="30" rows="10"></textarea><br>
+                    <button type="submit">SEND</button>
+                </form>
             </div>
         </div>
     </section>

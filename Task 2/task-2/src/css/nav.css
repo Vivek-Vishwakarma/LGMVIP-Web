@@ -1,9 +1,5 @@
 .navitem{
     display: flex;
-    width: 90vw;
+    width: 100vw;
     justify-content: space-between;
-  
-}
-.navbar{
-    margin: 0px 30px;
 }

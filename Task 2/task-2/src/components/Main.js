@@ -1,17 +1,26 @@
 import React, { useState } from "react";
 import "../css/nav.css";
+import Loading from "./Loading";
 
 const Navbar = () => {
   const [user, setuser] = useState([]);
+  const [loading, setloading] = useState(false)
   const getUser = async () => {
+    setloading(true)
     const response = await fetch("https://reqres.in/api/users?page=1");
     let data = await response.json();
     setuser(data.data);
+    setloading(false)
+
   };
   const next = async () => {
+    setloading(true)
+
     const response = await fetch("https://reqres.in/api/users?page=2");
     let data = await response.json();
     setuser(data.data);
+    setloading(false)
+
   }
   return (
     <>
@@ -36,11 +45,8 @@ const Navbar = () => {
             id="navbarNavAltMarkup"
           >
             <div className="navbar-nav">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className="nav-link active" aria-current="page">
                 Home
-              </a>
-              <a className="nav-link" href="#">
-                About
               </a>
             </div>
             <div className="button">
@@ -51,6 +57,9 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      <div className="loadingDiv">
+        {loading ? <Loading /> : " "}
+      </div>
       <div className="container">
         {user.map((element) => {
           return (

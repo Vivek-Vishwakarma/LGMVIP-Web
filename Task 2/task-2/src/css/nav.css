@@ -1,0 +1,9 @@
+.navitem{
+    display: flex;
+    width: 90vw;
+    justify-content: space-between;
+  
+}
+.navbar{
+    margin: 0px 30px;
+}

@@ -7,7 +7,7 @@ body{
   background: linear-gradient(59deg,#485077,#3f7fa3,#70de09,#51bdf7,#f4f86a) no-repeat;
   background-size: 300% 300%;
   animation: gradient-animation 20s ease infinite;
-  height: 100%;
+  height: 100vh;
   width: 98vw;
 }
 
@@ -20,5 +20,11 @@ body{
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    height: 100%;
   }
 }

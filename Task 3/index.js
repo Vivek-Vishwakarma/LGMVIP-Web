@@ -16,14 +16,18 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'))
 app.use(expressLayouts);
 app.set('layout', 'layouts/layout');
+app.use(express.json());
+app.use(express.urlencoded());
 
 const teacherRoutes = require("./routes/teacherlogin")
+const studentRoutes = require("./routes/studentlogin")
 app.use("/teacher",teacherRoutes)
-
+app.use("/student",studentRoutes)
 
 app.get("/", (req, res) => {
   res.render("index");
 });
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

@@ -1,0 +1,36 @@
+<form method="POST">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name : </label>
+      <input type="text" name="name" required class="form-control" value="<%= user.name  %> " id="exampleInputEmail1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Roll No. : </label>
+        <input type="text" name="roll" value="<%= user.roll  %> " required class="form-control" id="exampleInputEmail1" >
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Maths : </label>
+        <input type="text" name="math" value="<%= user.math  %> " class="form-control" id="exampleInputEmail1" >
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">English : </label>
+        <input type="text" name="english" value="<%= user.english  %> " class="form-control" id="exampleInputEmail1" >
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Science : </label>
+        <input type="text" name="science" value="<%= user.science  %> " class="form-control" id="exampleInputEmail1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Social Studies : </label>
+        <input type="text" name="ss" value="<%= user.ss  %> " class="form-control" id="exampleInputEmail1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Language : </label>
+        <input type="text" name="lang" value="<%= user.lang  %> " class="form-control" id="exampleInputEmail1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Status (pass/fail) : </label>
+        <input type="text" name="status" value="<%= user.status  %> " required class="form-control" id="exampleInputEmail1">
+      </div>
+    <button type="submit" class="btn btn-success">Update</button>
+</form>
+<a href="/teacher/viewall"><button type="submit" class="btn btn-primary">View All</button></a>

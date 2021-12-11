@@ -1,0 +1,30 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Roll No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Maths</th>
+        <th scope="col">English</th>
+        <th scope="col">Science</th>
+        <th scope="col">Language</th>
+        <th scope="col">Social Studies</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+        <%  student.forEach(element => { %>
+            <tr class="head">
+                <th scope="row"><%= element.roll %></th>
+                <td><%= element.name %></td>
+                <td><%= element.math %></td>
+                <td><%= element.english %></td>
+                <td><%= element.science %></td>
+                <td><%= element.lang %></td>
+                <td><%= element.ss %></td>
+                <td><%= element.status %></td> 
+                <td><a href="/teacher/edit/<%= element.id %> "><img src="https://img.icons8.com/material-outlined/30/000000/edit.png"/></a>
+                  <a href="/teacher/delete/<%= element.id %> ""><img src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png"/></a></td>
+              </tr>
+        <%}) %>
+    </tbody>
+  </table>

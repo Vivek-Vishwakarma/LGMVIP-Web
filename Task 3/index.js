@@ -27,6 +27,9 @@ app.use("/student",studentRoutes)
 app.get("/", (req, res) => {
   res.render("index");
 });
+app.get("/about", (req, res) => {
+  res.render("about");
+});
 
 
 app.listen(port, () => {

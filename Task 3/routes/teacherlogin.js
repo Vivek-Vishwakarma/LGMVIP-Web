@@ -13,7 +13,9 @@ router.post("/login", (req, res) => {
         res.redirect("/teacher/option");
     }
     else{
-        res.send("enter correct password")
+        res.render("teacher/teacherLogin", {
+            error : "Please Enter Correct Password !!"
+        })
     }
 });
 router.get("/add", (req, res) => {
@@ -29,7 +31,7 @@ router.post("/add", async (req, res) => {
         science : req.body.science,
         ss : req.body.ss,
         lang : req.body.lang,
-        status : req.body.status,
+        status : req.body.status
     })
     try {
         const newStudent = await singleStudent.save();
@@ -44,11 +46,11 @@ router.get("/viewall", async (req, res) => {
     res.render("teacher/viewall", {student : allStudents})
 });
 router.get("/delete/:id", async (req, res) => {
-    await Student.deleteOne(req.params)
+    await Student.findByIdAndDelete(req.params.id)
     res.redirect("/teacher/viewall")
 });
 router.get("/edit/:id", async (req, res) => {
-    const user = await Student.findOne(req.params)
+    const user = await Student.findById(req.params.id)
     res.render("teacher/edit", {user : user})
 });
 router.post("/edit/:id", async (req, res) => {

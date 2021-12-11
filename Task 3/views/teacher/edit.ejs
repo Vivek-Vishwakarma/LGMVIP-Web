@@ -1,4 +1,5 @@
-<form method="POST">
+<h2>Editing score of <%= user.name %> </h2>
+<form method="POST" class="addStu" autocomplete="off">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Name : </label>
       <input type="text" name="name" required class="form-control" value="<%= user.name  %> " id="exampleInputEmail1">
@@ -32,5 +33,5 @@
         <input type="text" name="status" value="<%= user.status  %> " required class="form-control" id="exampleInputEmail1">
       </div>
     <button type="submit" class="btn btn-success">Update</button>
+    <a href="/teacher/viewall" class="btn btn-primary">View All</a>
 </form>
-<a href="/teacher/viewall"><button type="submit" class="btn btn-primary">View All</button></a>

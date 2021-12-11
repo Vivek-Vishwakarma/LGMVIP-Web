@@ -1,4 +1,6 @@
-<table class="table table-striped">
+<h1 style="text-align: center; margin-top: 30px;">All Students</h1>
+<div class="tableDiv">
+  <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">Roll No.</th>
@@ -22,9 +24,10 @@
                 <td><%= element.lang %></td>
                 <td><%= element.ss %></td>
                 <td><%= element.status %></td> 
-                <td><a href="/teacher/edit/<%= element.id %> "><img src="https://img.icons8.com/material-outlined/30/000000/edit.png"/></a>
-                  <a href="/teacher/delete/<%= element.id %> ""><img src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png"/></a></td>
+                <td><a href="/teacher/edit/<%= element._id %> "><img style="margin: 0px 5px;" src="https://img.icons8.com/material-outlined/30/000000/edit.png"/></a>
+                  <a href="/teacher/delete/<%= element._id %> "><img style="margin: 0px 5px;" src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png"/></a></td>
               </tr>
         <%}) %>
     </tbody>
   </table>
+</div>
